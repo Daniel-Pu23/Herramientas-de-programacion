@@ -10,6 +10,7 @@ namespace Clinica
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Este es un mensaje de prueba");
         }
     }
 }
