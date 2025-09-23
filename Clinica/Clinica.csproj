@@ -43,6 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AyudaDiagnostica.cs" />
+    <Compile Include="Models\Contacto.cs" />
+    <Compile Include="Models\DatosVitales.cs" />
+    <Compile Include="Models\ItemOrden.cs" />
+    <Compile Include="Models\Medicamento.cs" />
+    <Compile Include="Models\Orden.cs" />
+    <Compile Include="Models\OrdenMedicamento.cs" />
+    <Compile Include="Models\OrdenProcedimiento.cs" />
+    <Compile Include="Models\Paciente.cs" />
+    <Compile Include="Models\Persona.cs" />
+    <Compile Include="Models\Procedimiento.cs" />
+    <Compile Include="Models\SeguroMedico.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Visita.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

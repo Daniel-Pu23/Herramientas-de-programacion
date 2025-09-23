@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clinica.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Clinica
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Este es un mensaje de prueba");
+            Console.WriteLine("Hola mundo");
         }
     }
 }
