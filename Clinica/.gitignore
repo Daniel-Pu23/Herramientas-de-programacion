@@ -1,0 +1,20 @@
+﻿# Archivos y carpetas innecesarios para Git
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos generados por VS
+*.pdb
+*.dll
+*.exe
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
