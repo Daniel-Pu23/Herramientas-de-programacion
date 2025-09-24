@@ -1,4 +1,5 @@
-﻿using Clinica.Models;
+﻿using Clinica.App;
+using Clinica.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Clinica
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola mundo");
+            EjecutarPuertos.EjecutarTodo();
         }
     }
 }

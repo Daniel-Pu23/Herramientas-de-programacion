@@ -43,25 +43,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\EjecutarPuertos.cs" />
+    <Compile Include="App\Puertos\ActualizarEmpleado.cs" />
+    <Compile Include="App\Puertos\ActualizarPaciente.cs" />
+    <Compile Include="App\Puertos\ActualizarRegistroMedico.cs" />
+    <Compile Include="App\Puertos\BuscarOrden.cs" />
+    <Compile Include="App\Puertos\BuscarPaciente.cs" />
+    <Compile Include="App\Puertos\BuscarRegistroMedico.cs" />
+    <Compile Include="App\Puertos\CrearEmpleado.cs" />
+    <Compile Include="App\Puertos\CrearFactura.cs" />
+    <Compile Include="App\Puertos\CrearOrden.cs" />
+    <Compile Include="App\Puertos\CrearPaciente.cs" />
+    <Compile Include="App\Puertos\CrearRegistroMedico.cs" />
+    <Compile Include="App\Puertos\CrearVisita.cs" />
+    <Compile Include="App\Puertos\LoginEmpleado.cs" />
     <Compile Include="Models\AyudaDiagnostica.cs" />
+    <Compile Include="Models\Cita.cs" />
     <Compile Include="Models\Contacto.cs" />
     <Compile Include="Models\DatosVitales.cs" />
+    <Compile Include="Models\Facturacion.cs" />
     <Compile Include="Models\ItemOrden.cs" />
     <Compile Include="Models\Medicamento.cs" />
     <Compile Include="Models\Orden.cs" />
+    <Compile Include="Models\OrdenAyudasD.cs" />
     <Compile Include="Models\OrdenMedicamento.cs" />
     <Compile Include="Models\OrdenProcedimiento.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Procedimiento.cs" />
+    <Compile Include="Models\RegistroMedico.cs" />
     <Compile Include="Models\SeguroMedico.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Visita.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CitaService.cs" />
+    <Compile Include="Services\FacturacionService.cs" />
+    <Compile Include="Services\OrdenService.cs" />
+    <Compile Include="Services\PacienteService.cs" />
+    <Compile Include="Services\RegistroMedicoService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
+    <Compile Include="Services\VisitaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

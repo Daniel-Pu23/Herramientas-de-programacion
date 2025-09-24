@@ -66,7 +66,7 @@ namespace Clinica.Models
     public enum RolUsuario
     {
         Medico,
-        Emfermera,
+        Enfermera,
         Administrativo,
         RecursosHumanos,
         Soporte

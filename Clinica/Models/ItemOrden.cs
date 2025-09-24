@@ -10,7 +10,7 @@ namespace Clinica.Models
     /// Clase base abstracta para los items de una orden medica.
     /// </summary>
 
-    public class ItemOrden
+    public abstract class ItemOrden
     {
         /// <summary>
         /// Número de orden al que pertenece este ítem.
