@@ -6,46 +6,20 @@ using System.Threading.Tasks;
 
 namespace Clinica.Models
 {
-    /// <summary>
-    /// Representa los datos vitales registrados durante una visita medica.
-    /// </summary>
-    
     public class DatosVitales
     {
-        /// <summary>
-        /// Presión arterial del paciente.
-        /// </summary>
-        
-        public string PresionArterial { get; set; }
+        public DateTime FechaHora { get; set; } = DateTime.Now;
 
-        /// <summary>
-        /// Temperatura corporal en grados Celsius.
-        /// </summary>
-        
-        public float Temperatura { get; set; }
+        public float Temperatura { get; set; }           // °C
+        public int FrecuenciaCardiaca { get; set; }      // latidos por minuto
+        public int FrecuenciaRespiratoria { get; set; }  // respiraciones por minuto
+        public int PresionSistolica { get; set; }        // mmHg
+        public int PresionDiastolica { get; set; }       // mmHg
+        public int SaturacionOxigeno { get; set; }       // %
 
-        /// <summary>
-        /// Pulso cardíaco en latidos por minuto.
-        /// </summary>
-        
-        public int Pulso { get; set; }
-
-        /// <summary>
-        /// Nivel de oxígeno en la sangre (SpO2, en %).
-        /// </summary>
-        
-        public int Oxigeno { get; set; }
-
-        /// <summary>
-        /// Verifica que todos los datos vitales tengan valores aceptables.
-        /// </summary>
-        
-        public bool DatosValidos()
+        public string Descripcion()
         {
-            return Temperatura >= 30 && Temperatura <= 45 &&
-                   Pulso >= 30 && Pulso <= 200 &&
-                   Oxigeno >= 50 && Oxigeno <= 100 &&
-                   !string.IsNullOrWhiteSpace(PresionArterial);
+            return $"Temp: {Temperatura}°C, FC: {FrecuenciaCardiaca} lpm, FR: {FrecuenciaRespiratoria} rpm, PA: {PresionSistolica}/{PresionDiastolica} mmHg, SO2: {SaturacionOxigeno}%";
         }
     }
 }

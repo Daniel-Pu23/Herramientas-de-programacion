@@ -43,17 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\InputPorts\IPuertoEntradaFactura.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaOrden.cs" />
+    <Compile Include="Application\InputPorts\IPuertoEntradaRegistroMedico.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaUsuario.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaPaciente.cs" />
+    <Compile Include="Application\InputPorts\IPuertoEntradaVisita.cs" />
+    <Compile Include="Application\OutputPorts\IRepositorioFactura.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioOrden.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioPaciente.cs" />
+    <Compile Include="Application\OutputPorts\IRepositorioRegistroMedico.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioUsuario.cs" />
+    <Compile Include="Application\OutputPorts\IRepositorioVisita.cs" />
     <Compile Include="Domain\Entities\AyudaDiagnostica.cs" />
     <Compile Include="Domain\Entities\Cita.cs" />
     <Compile Include="Domain\Entities\Contacto.cs" />
     <Compile Include="Domain\Entities\DatosVitales.cs" />
-    <Compile Include="Domain\Entities\Facturacion.cs" />
+    <Compile Include="Domain\Entities\Factura.cs" />
     <Compile Include="Domain\Entities\ItemOrden.cs" />
     <Compile Include="Domain\Entities\Medicamento.cs" />
     <Compile Include="Domain\Entities\Orden.cs" />
@@ -67,21 +73,30 @@
     <Compile Include="Domain\Entities\SeguroMedico.cs" />
     <Compile Include="Domain\Entities\Usuario.cs" />
     <Compile Include="Domain\Entities\Visita.cs" />
+    <Compile Include="Domain\Services\ServicioFactura.cs" />
     <Compile Include="Domain\Services\ServicioOrden.cs" />
     <Compile Include="Domain\Services\ServicioPaciente.cs" />
+    <Compile Include="Domain\Services\ServicioRegistroMedico.cs" />
     <Compile Include="Domain\Services\ServicioUsuario.cs" />
+    <Compile Include="Domain\Services\ServicioVisita.cs" />
     <Compile Include="Domain\Validators\IValidadorOrden.cs" />
     <Compile Include="Domain\Validators\IValidadorPaciente.cs" />
     <Compile Include="Domain\Validators\IValidadorUsuario.cs" />
     <Compile Include="Domain\Validators\ValidadorOrden.cs" />
     <Compile Include="Domain\Validators\ValidadorPaciente.cs" />
     <Compile Include="Domain\Validators\ValidadorUsuario.cs" />
+    <Compile Include="Infrastructure\Adapters\SimuladorFacturaConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorOrdenConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorPacienteConsola.cs" />
+    <Compile Include="Infrastructure\Adapters\SimuladorRegistroMedicoConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorUsuarioConsola.cs" />
+    <Compile Include="Infrastructure\Adapters\SimuladorVisitaConsola.cs" />
+    <Compile Include="Infrastructure\Repositories\RepositorioFacturaEnMemoria.cs" />
     <Compile Include="Infrastructure\Repositories\RepositorioOrdenEnMemoria.cs" />
     <Compile Include="Infrastructure\Repositories\RepositorioPacienteEnMemoria.cs" />
+    <Compile Include="Infrastructure\Repositories\RepositorioRegistroMedicoEnMemoria.cs" />
     <Compile Include="Infrastructure\Repositories\RepositorioUsuarioEnMemoria.cs" />
+    <Compile Include="Infrastructure\Repositories\RepositorioVisitaEnMemoria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

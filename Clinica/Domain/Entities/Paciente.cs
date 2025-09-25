@@ -20,7 +20,7 @@ namespace Clinica.Models
             Seguro = new SeguroMedico();
         }
     }
-
+    
     public enum Genero
     {
         Masculino,

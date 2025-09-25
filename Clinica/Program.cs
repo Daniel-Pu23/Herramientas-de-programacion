@@ -35,6 +35,21 @@ namespace Clinica
             var validadorOrden = new ValidadorOrden();
             IPuertoEntradaOrden servicioOrden = new ServicioOrden(repositorioOrden, validadorOrden);
             SimuladorOrdenConsola.Ejecutar(servicioOrden);
+
+            // FACTURACIÓN
+            var repositorioFactura = new RepositorioFacturaEnMemoria();
+            IPuertoEntradaFactura servicioFactura = new ServicioFactura(repositorioFactura);
+            SimuladorFacturaConsola.Ejecutar(servicioFactura);
+
+            // VISITA
+            var repositorioVisita = new RepositorioVisitaEnMemoria();
+            IPuertoEntradaVisita servicioVisita = new ServicioVisita(repositorioVisita);
+            SimuladorVisitaConsola.Ejecutar(servicioVisita);
+
+            // REGISTRO MÉDICO
+            var repositorioRegistro = new RepositorioRegistroMedicoEnMemoria();
+            IPuertoEntradaRegistroMedico servicioRegistro = new ServicioRegistroMedico(repositorioRegistro);
+            SimuladorRegistroMedicoConsola.Ejecutar(servicioRegistro);
         }
     }
 }

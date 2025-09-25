@@ -16,7 +16,7 @@ namespace Clinica.Models
         RecursosHumanos,
         Soporte
     }
-
+    
     public class Usuario
     {
         public string Cedula { get; set; }
