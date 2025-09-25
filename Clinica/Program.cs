@@ -50,6 +50,24 @@ namespace Clinica
             var repositorioRegistro = new RepositorioRegistroMedicoEnMemoria();
             IPuertoEntradaRegistroMedico servicioRegistro = new ServicioRegistroMedico(repositorioRegistro);
             SimuladorRegistroMedicoConsola.Ejecutar(servicioRegistro);
+
+            // HISTORIA CLÍNICA
+            var repositorioHistoria = new RepositorioHistoriaClinicaEnMemoria();
+            IPuertoEntradaHistoriaClinica servicioHistoria = new ServicioHistoriaClinica(repositorioHistoria);
+            SimuladorHistoriaClinicaConsola.Ejecutar(servicioHistoria);
+
+            //CITA
+            var repositorioCita = new RepositorioCitaEnMemoria();
+            IPuertoEntradaCita servicioCita = new ServicioCita(repositorioCita);
+            SimuladorCitaConsola.Ejecutar(servicioCita);
+
+            // FUNCIONALIDADES FINALES
+            BuscarPacienteConsola.Ejecutar(repositorioPaciente);
+            BuscarOrdenConsola.Ejecutar(repositorioOrden);
+            BuscarRegistroMedicoConsola.Ejecutar(repositorioRegistro);
+            ActualizarPacienteConsola.Ejecutar(repositorioPaciente);
+            ActualizarEmpleadoConsola.Ejecutar(repositorioUsuario);
+            ActualizarRegistroMedicoConsola.Ejecutar(repositorioRegistro);
         }
     }
 }

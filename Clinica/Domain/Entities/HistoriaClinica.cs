@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace Clinica.Domain.Entities
 {
-    public class Cita
+    public class HistoriaClinica
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-        public DateTime FechaHora { get; set; }
+        public DateTime FechaCreacion { get; set; } = DateTime.Now;
 
         public Paciente Paciente { get; set; }
-        public Usuario Profesional { get; set; }
-
-        public string Motivo { get; set; }
-        public bool Confirmada { get; set; } = false;
+        public List<RegistroMedico> RegistrosMedicos { get; set; } = new List<RegistroMedico>();
     }
 }
