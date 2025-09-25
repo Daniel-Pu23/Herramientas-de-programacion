@@ -1,4 +1,9 @@
-﻿using Clinica.App;
+﻿using Clinica;
+using Clinica.Application.InputPorts;
+using Clinica.Domain.Services;
+using Clinica.Domain.Validators;
+using Clinica.Infrastructure.Adapters;
+using Clinica.Infrastructure.Repositories;
 using Clinica.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +17,24 @@ namespace Clinica
     {
         static void Main(string[] args)
         {
-            EjecutarPuertos.EjecutarTodo();
+
+            // USUARIO
+            var repositorioUsuario = new RepositorioUsuarioEnMemoria();
+            var validadorUsuario = new ValidadorUsuario();
+            IPuertoEntradaUsuario servicioUsuario = new ServicioUsuario(repositorioUsuario, validadorUsuario);
+            SimuladorUsuarioConsola.Ejecutar(servicioUsuario);
+
+            // PACIENTE
+            var repositorioPaciente = new RepositorioPacienteEnMemoria();
+            var validadorPaciente = new ValidadorPaciente();
+            IPuertoEntradaPaciente servicioPaciente = new ServicioPaciente(repositorioPaciente, validadorPaciente);
+            SimuladorPacienteConsola.Ejecutar(servicioPaciente);
+
+            // ORDEN
+            var repositorioOrden = new RepositorioOrdenEnMemoria();
+            var validadorOrden = new ValidadorOrden();
+            IPuertoEntradaOrden servicioOrden = new ServicioOrden(repositorioOrden, validadorOrden);
+            SimuladorOrdenConsola.Ejecutar(servicioOrden);
         }
     }
 }
