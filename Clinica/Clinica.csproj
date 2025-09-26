@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\InputPorts\IPuertoEntradaCita.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaFactura.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaHistoriaClinica.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaOrden.cs" />
@@ -51,7 +50,6 @@
     <Compile Include="Application\InputPorts\IPuertoEntradaUsuario.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaPaciente.cs" />
     <Compile Include="Application\InputPorts\IPuertoEntradaVisita.cs" />
-    <Compile Include="Application\OutputPorts\IRepositorioCita.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioFactura.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioHistoriaClinica.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioOrden.cs" />
@@ -59,7 +57,6 @@
     <Compile Include="Application\OutputPorts\IRepositorioRegistroMedico.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioUsuario.cs" />
     <Compile Include="Application\OutputPorts\IRepositorioVisita.cs" />
-    <Compile Include="Domain\Entities\Cita.cs" />
     <Compile Include="Domain\Entities\Contacto.cs" />
     <Compile Include="Domain\Entities\DatosVitales.cs" />
     <Compile Include="Domain\Entities\Factura.cs" />
@@ -75,7 +72,6 @@
     <Compile Include="Domain\Entities\SeguroMedico.cs" />
     <Compile Include="Domain\Entities\Usuario.cs" />
     <Compile Include="Domain\Entities\Visita.cs" />
-    <Compile Include="Domain\Services\ServicioCita.cs" />
     <Compile Include="Domain\Services\ServicioFactura.cs" />
     <Compile Include="Domain\Services\ServicioHistoriaClinica.cs" />
     <Compile Include="Domain\Services\ServicioOrden.cs" />
@@ -95,7 +91,6 @@
     <Compile Include="Infrastructure\Adapters\BuscarOrdenConsola.cs" />
     <Compile Include="Infrastructure\Adapters\BuscarPacienteConsola.cs" />
     <Compile Include="Infrastructure\Adapters\BuscarRegistroMedicoConsola.cs" />
-    <Compile Include="Infrastructure\Adapters\SimuladorCitaConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorFacturaConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorHistoriaClinicaConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorOrdenConsola.cs" />
@@ -103,7 +98,6 @@
     <Compile Include="Infrastructure\Adapters\SimuladorRegistroMedicoConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorUsuarioConsola.cs" />
     <Compile Include="Infrastructure\Adapters\SimuladorVisitaConsola.cs" />
-    <Compile Include="Infrastructure\Repositories\RepositorioCitaEnMemoria.cs" />
     <Compile Include="Infrastructure\Repositories\RepositorioFacturaEnMemoria.cs" />
     <Compile Include="Infrastructure\Repositories\RepositorioHistoriaClinicaEnMemoria.cs" />
     <Compile Include="Infrastructure\Repositories\RepositorioOrdenEnMemoria.cs" />

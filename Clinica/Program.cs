@@ -18,56 +18,56 @@ namespace Clinica
         static void Main(string[] args)
         {
 
-            // USUARIO
-            var repositorioUsuario = new RepositorioUsuarioEnMemoria();
+            // Usuarios
+            var repositorioUsuarios = new RepositorioUsuarioEnMemoria();
             var validadorUsuario = new ValidadorUsuario();
-            IPuertoEntradaUsuario servicioUsuario = new ServicioUsuario(repositorioUsuario, validadorUsuario);
+            IPuertoEntradaUsuario servicioUsuario = new ServicioUsuario(repositorioUsuarios, validadorUsuario);
             SimuladorUsuarioConsola.Ejecutar(servicioUsuario);
 
-            // PACIENTE
+            // Pacientes
             var repositorioPaciente = new RepositorioPacienteEnMemoria();
             var validadorPaciente = new ValidadorPaciente();
             IPuertoEntradaPaciente servicioPaciente = new ServicioPaciente(repositorioPaciente, validadorPaciente);
             SimuladorPacienteConsola.Ejecutar(servicioPaciente);
 
-            // ORDEN
+            // Orden médica
             var repositorioOrden = new RepositorioOrdenEnMemoria();
             var validadorOrden = new ValidadorOrden();
             IPuertoEntradaOrden servicioOrden = new ServicioOrden(repositorioOrden, validadorOrden);
             SimuladorOrdenConsola.Ejecutar(servicioOrden);
 
-            // FACTURACIÓN
+            // Factura
             var repositorioFactura = new RepositorioFacturaEnMemoria();
             IPuertoEntradaFactura servicioFactura = new ServicioFactura(repositorioFactura);
             SimuladorFacturaConsola.Ejecutar(servicioFactura);
 
-            // VISITA
+            // Visita
             var repositorioVisita = new RepositorioVisitaEnMemoria();
             IPuertoEntradaVisita servicioVisita = new ServicioVisita(repositorioVisita);
             SimuladorVisitaConsola.Ejecutar(servicioVisita);
 
-            // REGISTRO MÉDICO
+            // Registro médico
             var repositorioRegistro = new RepositorioRegistroMedicoEnMemoria();
             IPuertoEntradaRegistroMedico servicioRegistro = new ServicioRegistroMedico(repositorioRegistro);
             SimuladorRegistroMedicoConsola.Ejecutar(servicioRegistro);
 
-            // HISTORIA CLÍNICA
+            // Historia clínica
             var repositorioHistoria = new RepositorioHistoriaClinicaEnMemoria();
             IPuertoEntradaHistoriaClinica servicioHistoria = new ServicioHistoriaClinica(repositorioHistoria);
             SimuladorHistoriaClinicaConsola.Ejecutar(servicioHistoria);
 
-            //CITA
-            var repositorioCita = new RepositorioCitaEnMemoria();
-            IPuertoEntradaCita servicioCita = new ServicioCita(repositorioCita);
-            SimuladorCitaConsola.Ejecutar(servicioCita);
-
-            // FUNCIONALIDADES FINALES
+            // Consultas
             BuscarPacienteConsola.Ejecutar(repositorioPaciente);
             BuscarOrdenConsola.Ejecutar(repositorioOrden);
             BuscarRegistroMedicoConsola.Ejecutar(repositorioRegistro);
+
+            // Actualizaciones
+            ActualizarEmpleadoConsola.Ejecutar(repositorioUsuarios);
             ActualizarPacienteConsola.Ejecutar(repositorioPaciente);
-            ActualizarEmpleadoConsola.Ejecutar(repositorioUsuario);
             ActualizarRegistroMedicoConsola.Ejecutar(repositorioRegistro);
+
+            Console.WriteLine("\n✅ TODO FUNCIONÓ CORRECTAMENTE ✅");
         }
     }
 }
+
